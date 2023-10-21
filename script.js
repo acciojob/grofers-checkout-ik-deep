@@ -15,6 +15,7 @@ const getSum = () => {
   // Create a new row for the total price
   const table = document.querySelector('table');
   const newRow = table.insertRow();
+	newRow.id="ans"
   const cell = newRow.insertCell();
   cell.textContent = 'Total Price:';
   cell.colSpan = 2;
@@ -23,6 +24,7 @@ const getSum = () => {
   const totalCell = newRow.insertCell();
   totalCell.textContent = totalPrice.toFixed(2);
   totalCell.style.fontWeight = 'bold';
+	totalCell.id="ans";
 };
 
 getSumBtn.addEventListener("click", getSum);
